@@ -9,21 +9,27 @@
 /* Begin PBXBuildFile section */
 		4308CE1029359F9700234085 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4308CE0F29359F9700234085 /* AppDelegate.swift */; };
 		4308CE1229359F9700234085 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4308CE1129359F9700234085 /* SceneDelegate.swift */; };
-		4308CE1429359F9700234085 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4308CE1329359F9700234085 /* ViewController.swift */; };
 		4308CE1729359F9700234085 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4308CE1529359F9700234085 /* Main.storyboard */; };
 		4308CE1929359F9900234085 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4308CE1829359F9900234085 /* Assets.xcassets */; };
 		4308CE1C29359F9900234085 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4308CE1A29359F9900234085 /* LaunchScreen.storyboard */; };
+		4308CE282935A4D700234085 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4308CE272935A4D700234085 /* OnboardingViewController.swift */; };
+		4308CE2B2935AF9000234085 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4308CE2A2935AF9000234085 /* UIView+Extension.swift */; };
+		4308CE2D2935B16800234085 /* OnboardingSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4308CE2C2935B16800234085 /* OnboardingSlide.swift */; };
+		4308CE2F2935B3A100234085 /* OnboardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4308CE2E2935B3A100234085 /* OnboardingCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4308CE0C29359F9700234085 /* Yummie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Yummie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4308CE0F29359F9700234085 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4308CE1129359F9700234085 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		4308CE1329359F9700234085 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4308CE1629359F9700234085 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4308CE1829359F9900234085 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4308CE1B29359F9900234085 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4308CE1D29359F9900234085 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4308CE272935A4D700234085 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		4308CE2A2935AF9000234085 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		4308CE2C2935B16800234085 /* OnboardingSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSlide.swift; sourceTree = "<group>"; };
+		4308CE2E2935B3A100234085 /* OnboardingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +62,58 @@
 		4308CE0E29359F9700234085 /* Yummie */ = {
 			isa = PBXGroup;
 			children = (
+				4308CE292935AF6C00234085 /* Extensions */,
+				4308CE252935A45000234085 /* CustomViews */,
+				4308CE242935A43B00234085 /* Views */,
+				4308CE232935A43400234085 /* Models */,
 				4308CE0F29359F9700234085 /* AppDelegate.swift */,
 				4308CE1129359F9700234085 /* SceneDelegate.swift */,
-				4308CE1329359F9700234085 /* ViewController.swift */,
 				4308CE1529359F9700234085 /* Main.storyboard */,
 				4308CE1829359F9900234085 /* Assets.xcassets */,
 				4308CE1A29359F9900234085 /* LaunchScreen.storyboard */,
 				4308CE1D29359F9900234085 /* Info.plist */,
 			);
 			path = Yummie;
+			sourceTree = "<group>";
+		};
+		4308CE232935A43400234085 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4308CE2C2935B16800234085 /* OnboardingSlide.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		4308CE242935A43B00234085 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4308CE262935A46200234085 /* OnBoarding */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4308CE252935A45000234085 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		4308CE262935A46200234085 /* OnBoarding */ = {
+			isa = PBXGroup;
+			children = (
+				4308CE272935A4D700234085 /* OnboardingViewController.swift */,
+				4308CE2E2935B3A100234085 /* OnboardingCollectionViewCell.swift */,
+			);
+			path = OnBoarding;
+			sourceTree = "<group>";
+		};
+		4308CE292935AF6C00234085 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4308CE2A2935AF9000234085 /* UIView+Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +187,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4308CE1429359F9700234085 /* ViewController.swift in Sources */,
+				4308CE2D2935B16800234085 /* OnboardingSlide.swift in Sources */,
 				4308CE1029359F9700234085 /* AppDelegate.swift in Sources */,
 				4308CE1229359F9700234085 /* SceneDelegate.swift in Sources */,
+				4308CE2B2935AF9000234085 /* UIView+Extension.swift in Sources */,
+				4308CE282935A4D700234085 /* OnboardingViewController.swift in Sources */,
+				4308CE2F2935B3A100234085 /* OnboardingCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
